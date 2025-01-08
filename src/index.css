@@ -1,26 +1,26 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: #c8f3dd ;
+body {
+  background-color: #c8f3dd;
 }
 
-.question-number{
+.question-number {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
-  background-color: #FBF6E9;
+  background-color: #fbf6e9;
   width: 500px;
   padding: 1rem;
   border-radius: 10px;
 }
 
-.layout-container{
+.layout-container {
   padding: 1rem;
-  background-color: #5DB996;
+  background-color: #5db996;
   gap: 10px;
   width: 550px;
   height: 330px;
@@ -33,50 +33,50 @@ body{
   /* box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5); */
 }
 
-.answer{
+.answer {
   padding: 1rem;
-  background-color: #FBF6E9;
+  background-color: #fbf6e9;
   width: 500px;
   border-radius: 10px;
 }
-.answer ul li{
+.answer ul li {
   list-style: none;
   margin: 10px;
 }
-.answer ul li input{
+.answer ul li input {
   margin-inline: 10px;
 }
 
-.answer ul li span{
+.answer ul li span {
   cursor: pointer;
 }
 
-.alphabet{
+.alphabet {
   margin-right: 10px;
 }
-.content-label{
+.content-label {
   display: flex;
   align-items: center;
 }
-.content-label input{
+.content-label input {
   height: 30px;
 }
-.checkbox{
+.checkbox {
   appearance: none;
   width: 28px;
   height: 25px;
   border-radius: 10px;
-  accent-color: #5DB996;
+  accent-color: #5db996;
   cursor: pointer;
   border: 2px solid black;
 }
 
-.checkbox:checked{
-  background-color: #5DB996;
+.checkbox:checked {
+  background-color: #5db996;
   position: relative;
 }
-.checkbox:checked::after{
-  content: '✔'; /* Ikon centang */
+.checkbox:checked::after {
+  content: "✔"; /* Ikon centang */
   color: white;
   font-size: 14px;
   position: absolute;
@@ -84,32 +84,32 @@ body{
   left: 7px;
 }
 
-.reset-button{
+.reset-button {
   width: 200px;
   padding: 5px;
   border: none;
-  background-color: #FBF6E9;
+  background-color: #fbf6e9;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
 }
-.reset-button:hover{
+.reset-button:hover {
   background-color: lightpink;
 }
 
-.submit-button{
+.submit-button {
   width: 200px;
   padding: 5px;
   border: none;
-  background-color: #FBF6E9;
+  background-color: #fbf6e9;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
 }
-.submit-button:hover{
+.submit-button:hover {
   background-color: lightpink;
 }
-.footer{
+.footer {
   display: flex;
   gap: 10px;
 }
