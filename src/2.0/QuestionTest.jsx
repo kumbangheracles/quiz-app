@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import AnswerTest from "./AnswerTest";
-import { ListQuestion } from "../Data/DataTest2";
 import Footer from "../Components/Layout/Footer";
 import "./test.css";
 
-export default function QuestionTest() {
+export default function QuestionTest({ questData }) {
   const [soal, setSoal] = useState(
-    ListQuestion.map((item) => ({
+    questData.map((item) => ({
       ...item,
       selectedAnswer: null, // Jawaban yang dipilih
       isCorrect: null, // Status benar/salah
@@ -74,11 +73,11 @@ export default function QuestionTest() {
           )}
         </div>
       ))}
-      {/* Footer with single Reset and Submit buttons */}
       <Footer
         resetSelection={resetSelection}
         submitHandler={submitHandler}
-        selectedAnswer={ListQuestion.selectedAnswer}
+        selectedAnswer={soal.selectedAnswer}
+        soal={soal}
       />
     </div>
   );
