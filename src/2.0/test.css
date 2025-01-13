@@ -58,6 +58,7 @@
   bottom: 50%;
   left: 70px;
   /* width: 100%; */
+  align-items: center;
 }
 .footer button {
   /* padding: 10px; */
@@ -126,6 +127,10 @@
     width: 100%;
     padding: 8px;
   }
+  .footer p {
+    color: white;
+    letter-spacing: 1px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -136,4 +141,10 @@
     width: 48vh;
     height: auto;
   }
+}
+
+.answered {
+  font-size: small;
+  margin-top: 7px;
+  letter-spacing: 2px;
 }

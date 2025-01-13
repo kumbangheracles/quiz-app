@@ -21,11 +21,11 @@ export default function SelectQuiz() {
 
   // Fungsi untuk menangani navigasi dengan efek loading
   const handleNavigation = (to) => {
-    setIsLoading(true); // Aktifkan loading
+    setIsLoading(true);
     setTimeout(() => {
-      navigate(to); // Gunakan navigate untuk berpindah rute
-      setIsLoading(false); // Matikan loading setelah navigasi
-    }, 1500); // Jeda 1.5 detik
+      navigate(to);
+      setIsLoading(false);
+    }, 1200);
   };
 
   return (
@@ -60,8 +60,8 @@ export default function SelectQuiz() {
         {DataRoute.map((item) => (
           <Route
             path={item.path}
-            element={<QuestionTest questData={item.data} />} // Render komponen berdasarkan path
-            key={item.id} // key tetap di DataRoute.map untuk iterasi
+            element={<QuestionTest questData={item.data} />}
+            key={item.id}
           />
         ))}
       </Routes>

@@ -69,7 +69,18 @@ export default function QuestionTest({ questData }) {
             />
           </div>
           {item.isCorrect !== null && (
-            <p>{item.isCorrect ? "Jawaban benar! ✅" : "Jawaban salah! ❌"}</p>
+            <>
+              <p className="answered">
+                {item.isCorrect ? "Correct! ✅" : "Incorrect! ❌"}
+              </p>
+              {!item.isCorrect ? (
+                <p className="answered">
+                  Correct Answer: {item[`option${item.ans}`]}
+                </p>
+              ) : (
+                ""
+              )}
+            </>
           )}
         </div>
       ))}
