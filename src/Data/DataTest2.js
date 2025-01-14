@@ -308,72 +308,72 @@ const Quest = {
       option4: "53.0",
       ans: 1, // Correct answer is "53"
     },
-    // {
-    //   id: 4,
-    //   question: "What does CSS stand for?",
-    //   option1: "Cascading Style Sheets",
-    //   option2: "Computer Style Sheets",
-    //   option3: "Creative Style Sheets",
-    //   option4: "Cascading Simple Sheets",
-    //   ans: 1, // Correct answer is "Cascading Style Sheets"
-    // },
-    // {
-    //   id: 5,
-    //   question:
-    //     "Which of the following is used to declare a variable in JavaScript?",
-    //   option1: "let",
-    //   option2: "var",
-    //   option3: "const",
-    //   option4: "All of the above",
-    //   ans: 4, // Correct answer is "All of the above"
-    // },
-    // {
-    //   id: 6,
-    //   question: "What is the correct syntax to print 'Hello World' in Python?",
-    //   option1: "echo 'Hello World'",
-    //   option2: "print('Hello World')",
-    //   option3: "console.log('Hello World')",
-    //   option4: "printf('Hello World')",
-    //   ans: 2, // Correct answer is "print('Hello World')"
-    // },
-    // {
-    //   id: 7,
-    //   question:
-    //     "Which programming language is known for its use in web development alongside HTML and CSS?",
-    //   option1: "C++",
-    //   option2: "JavaScript",
-    //   option3: "Java",
-    //   option4: "Ruby",
-    //   ans: 2, // Correct answer is "JavaScript"
-    // },
-    // {
-    //   id: 8,
-    //   question:
-    //     "Which of the following is a correct way to create an object in JavaScript?",
-    //   option1: "let obj = new Object();",
-    //   option2: "let obj = {}",
-    //   option3: "let obj = Object.create();",
-    //   option4: "All of the above",
-    //   ans: 4, // Correct answer is "All of the above"
-    // },
-    // {
-    //   id: 9,
-    //   question: "What is the primary purpose of an SQL JOIN operation?",
-    //   option1: "To combine data from different tables",
-    //   option2: "To delete data from a table",
-    //   option3: "To update data in a table",
-    //   option4: "To create a new table",
-    //   ans: 1, // Correct answer is "To combine data from different tables"
-    // },
-    // {
-    //   id: 10,
-    //   question: "What is the correct syntax for a while loop in JavaScript?",
-    //   option1: "while (condition) { }",
-    //   option2: "for (condition) { }",
-    //   option3: "loop (condition) { }",
-    //   option4: "do { condition } while;",
-    //   ans: 1, // Correct answer is "while (condition) { }"
-    // },
+    {
+      id: 4,
+      question: "What does CSS stand for?",
+      option1: "Cascading Style Sheets",
+      option2: "Computer Style Sheets",
+      option3: "Creative Style Sheets",
+      option4: "Cascading Simple Sheets",
+      ans: 1, // Correct answer is "Cascading Style Sheets"
+    },
+    {
+      id: 5,
+      question:
+        "Which of the following is used to declare a variable in JavaScript?",
+      option1: "let",
+      option2: "var",
+      option3: "const",
+      option4: "All of the above",
+      ans: 4, // Correct answer is "All of the above"
+    },
+    {
+      id: 6,
+      question: "What is the correct syntax to print 'Hello World' in Python?",
+      option1: "echo 'Hello World'",
+      option2: "print('Hello World')",
+      option3: "console.log('Hello World')",
+      option4: "printf('Hello World')",
+      ans: 2, // Correct answer is "print('Hello World')"
+    },
+    {
+      id: 7,
+      question:
+        "Which programming language is known for its use in web development alongside HTML and CSS?",
+      option1: "C++",
+      option2: "JavaScript",
+      option3: "Java",
+      option4: "Ruby",
+      ans: 2, // Correct answer is "JavaScript"
+    },
+    {
+      id: 8,
+      question:
+        "Which of the following is a correct way to create an object in JavaScript?",
+      option1: "let obj = new Object();",
+      option2: "let obj = {}",
+      option3: "let obj = Object.create();",
+      option4: "All of the above",
+      ans: 4, // Correct answer is "All of the above"
+    },
+    {
+      id: 9,
+      question: "What is the primary purpose of an SQL JOIN operation?",
+      option1: "To combine data from different tables",
+      option2: "To delete data from a table",
+      option3: "To update data in a table",
+      option4: "To create a new table",
+      ans: 1, // Correct answer is "To combine data from different tables"
+    },
+    {
+      id: 10,
+      question: "What is the correct syntax for a while loop in JavaScript?",
+      option1: "while (condition) { }",
+      option2: "for (condition) { }",
+      option3: "loop (condition) { }",
+      option4: "do { condition } while;",
+      ans: 1, // Correct answer is "while (condition) { }"
+    },
   ],
 };
 

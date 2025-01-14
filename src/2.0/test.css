@@ -14,7 +14,7 @@
 .question-number {
   display: flex;
   flex-direction: column;
-  background-color: azure;
+  background-color: #f0ffff;
   box-shadow: 9.31px 46.57px 74.51px 0px #9a9a9a2b;
   margin-block: 10px;
   width: 60vh;
@@ -23,7 +23,7 @@
   margin: auto;
   border-radius: 20px;
   letter-spacing: 1px;
-  border: 1px solid;
+  border: 2px solid;
 }
 
 .option-list {
@@ -117,7 +117,7 @@
   margin-block: 5px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 810px) {
   .footer {
     top: 0;
     left: 0;
@@ -130,6 +130,9 @@
   .footer p {
     color: white;
     letter-spacing: 1px;
+  }
+  .topic-container {
+    width: 70%;
   }
 }
 
@@ -147,4 +150,16 @@
   font-size: small;
   margin-top: 7px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 320px) {
+  .footer {
+    letter-spacing: 0px;
+  }
+  .footer .reset-button {
+    letter-spacing: 0px;
+  }
+  .footer .submit-button {
+    letter-spacing: 0px;
+  }
 }
