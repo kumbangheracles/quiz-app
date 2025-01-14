@@ -25,7 +25,13 @@
   letter-spacing: 1px;
   border: 2px solid;
 }
-
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
 .option-list {
   display: flex;
   flex-direction: column;

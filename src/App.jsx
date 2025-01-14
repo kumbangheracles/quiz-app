@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Layout from "./Layout";
 import QuestionTest from "./2.0/QuestionTest";
 import SelectQuiz from "./2.0/SelectQuiz";
 import { BrowserRouter } from "react-router";

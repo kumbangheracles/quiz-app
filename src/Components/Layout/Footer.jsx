@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import ResetButton from "./ResetButton";
 import SubmitButton from "./SubmittButton";
-
-export default function Footer({ resetSelection, submitHandler, soal }) {
+import BackButton from "../../assets/icon/backButton.svg";
+export default function Footer({
+  resetSelection,
+  submitHandler,
+  soal,
+  handleNavigation,
+  isLoading,
+}) {
   const [isSubmitted, setSubmitted] = useState(false);
   const totalAnswered = soal.filter(
     (item) => item.selectedAnswer !== null
@@ -31,6 +37,9 @@ export default function Footer({ resetSelection, submitHandler, soal }) {
   // console.log(score);
   return (
     <div className="footer">
+      <button onClick={() => handleNavigation("/")} className="back-button">
+        <img src={BackButton} alt="" /> Back
+      </button>
       <ResetButton
         resetSelection={resetSelection}
         aria-label="Reset Selection"

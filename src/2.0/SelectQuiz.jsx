@@ -32,7 +32,7 @@ export default function SelectQuiz() {
     <>
       {isLoading && (
         <div className="loading-container">
-          <div className="loader">{/* <p>Loading...</p> */}</div>
+          <div className="loader">{/* <p>loading. . . </p> */}</div>
         </div>
       )}
 
@@ -60,7 +60,13 @@ export default function SelectQuiz() {
         {DataRoute.map((item) => (
           <Route
             path={item.path}
-            element={<QuestionTest questData={item.data} />}
+            element={
+              <QuestionTest
+                questData={item.data}
+                handleNavigation={handleNavigation}
+                isLoading={isLoading}
+              />
+            }
             key={item.id}
           />
         ))}

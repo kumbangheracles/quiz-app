@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import AnswerTest from "./AnswerTest";
 import Footer from "../Components/Layout/Footer";
 import "./test.css";
-import BackButton from "../assets/icon/backButton.svg";
-export default function QuestionTest({ questData }) {
+
+export default function QuestionTest({
+  questData,
+  handleNavigation,
+  isLoading,
+}) {
   const [soal, setSoal] = useState(
     questData.map((item) => ({
       ...item,
@@ -54,10 +58,6 @@ export default function QuestionTest({ questData }) {
 
   return (
     <div className="question">
-      <button className="back-button">
-        {" "}
-        <img src={BackButton} alt="" /> Back
-      </button>
       {soal.map((item) => (
         <div className="question-number" key={item.id}>
           <h4>
@@ -92,7 +92,9 @@ export default function QuestionTest({ questData }) {
         resetSelection={resetSelection}
         submitHandler={submitHandler}
         selectedAnswer={soal.selectedAnswer}
+        handleNavigation={handleNavigation}
         soal={soal}
+        isLoading={isLoading}
       />
     </div>
   );
