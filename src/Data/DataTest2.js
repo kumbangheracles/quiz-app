@@ -375,6 +375,197 @@ const Quest = {
       ans: 1, // Correct answer is "while (condition) { }"
     },
   ],
+  biology: [
+    {
+      id: 1,
+      question: "What is the basic unit of life?",
+      option1: "Cell",
+      option2: "Atom",
+      option3: "Tissue",
+      option4: "Organ",
+      ans: 1, // Correct answer is "Cell"
+    },
+    {
+      id: 2,
+      question: "Which process do plants use to convert sunlight into energy?",
+      option1: "Respiration",
+      option2: "Photosynthesis",
+      option3: "Transpiration",
+      option4: "Digestion",
+      ans: 2, // Correct answer is "Photosynthesis"
+    },
+    {
+      id: 3,
+      question: "What molecule carries genetic information?",
+      option1: "RNA",
+      option2: "DNA",
+      option3: "Protein",
+      option4: "Lipid",
+      ans: 2, // Correct answer is "DNA"
+    },
+    {
+      id: 4,
+      question:
+        "Which organ is primarily responsible for filtering blood in the human body?",
+      option1: "Liver",
+      option2: "Heart",
+      option3: "Kidney",
+      option4: "Lung",
+      ans: 3, // Correct answer is "Kidney"
+    },
+    {
+      id: 5,
+      question: "What is the powerhouse of the cell?",
+      option1: "Nucleus",
+      option2: "Mitochondria",
+      option3: "Ribosome",
+      option4: "Golgi apparatus",
+      ans: 2, // Correct answer is "Mitochondria"
+    },
+    {
+      id: 6,
+      question: "Which blood type is known as the universal donor?",
+      option1: "Type A",
+      option2: "Type B",
+      option3: "Type AB",
+      option4: "Type O",
+      ans: 4, // Correct answer is "Type O"
+    },
+    {
+      id: 7,
+      question:
+        "What is the process by which water moves through a semi-permeable membrane?",
+      option1: "Diffusion",
+      option2: "Osmosis",
+      option3: "Active transport",
+      option4: "Endocytosis",
+      ans: 2, // Correct answer is "Osmosis"
+    },
+    {
+      id: 8,
+      question: "Which part of the brain controls balance and coordination?",
+      option1: "Cerebrum",
+      option2: "Medulla",
+      option3: "Cerebellum",
+      option4: "Hypothalamus",
+      ans: 3, // Correct answer is "Cerebellum"
+    },
+    {
+      id: 9,
+      question: "What type of organism is capable of making its own food?",
+      option1: "Heterotroph",
+      option2: "Autotroph",
+      option3: "Decomposer",
+      option4: "Herbivore",
+      ans: 2, // Correct answer is "Autotroph"
+    },
+    {
+      id: 10,
+      question:
+        "What is the process by which cells divide to form two identical cells?",
+      option1: "Meiosis",
+      option2: "Mitosis",
+      option3: "Binary fission",
+      option4: "Cytokinesis",
+      ans: 2, // Correct answer is "Mitosis"
+    },
+  ],
+  astronomy: [
+    {
+      id: 1,
+      question: "What is the largest planet in our solar system?",
+      option1: "Earth",
+      option2: "Jupiter",
+      option3: "Saturn",
+      option4: "Neptune",
+      ans: 2, // Correct answer is "Jupiter"
+    },
+    {
+      id: 2,
+      question: "Which planet is known as the 'Red Planet'?",
+      option1: "Mars",
+      option2: "Venus",
+      option3: "Mercury",
+      option4: "Jupiter",
+      ans: 1, // Correct answer is "Mars"
+    },
+    {
+      id: 3,
+      question:
+        "What is the name of the galaxy that contains our Solar System?",
+      option1: "Andromeda Galaxy",
+      option2: "Milky Way Galaxy",
+      option3: "Whirlpool Galaxy",
+      option4: "Sombrero Galaxy",
+      ans: 2, // Correct answer is "Milky Way Galaxy"
+    },
+    {
+      id: 4,
+      question:
+        "Which celestial event occurs when the Moon passes between the Earth and the Sun?",
+      option1: "Lunar Eclipse",
+      option2: "Solar Eclipse",
+      option3: "Equinox",
+      option4: "Solstice",
+      ans: 2, // Correct answer is "Solar Eclipse"
+    },
+    {
+      id: 5,
+      question: "What is the name of the first human to travel into space?",
+      option1: "Buzz Aldrin",
+      option2: "Neil Armstrong",
+      option3: "Yuri Gagarin",
+      option4: "Alan Shepard",
+      ans: 3, // Correct answer is "Yuri Gagarin"
+    },
+    {
+      id: 6,
+      question:
+        "What is the term for a star that suddenly increases greatly in brightness before fading?",
+      option1: "Supernova",
+      option2: "Black Hole",
+      option3: "Neutron Star",
+      option4: "Comet",
+      ans: 1, // Correct answer is "Supernova"
+    },
+    {
+      id: 7,
+      question: "Which planet has the most extensive ring system?",
+      option1: "Saturn",
+      option2: "Jupiter",
+      option3: "Uranus",
+      option4: "Neptune",
+      ans: 1, // Correct answer is "Saturn"
+    },
+    {
+      id: 8,
+      question: "What is the smallest planet in our solar system?",
+      option1: "Mercury",
+      option2: "Mars",
+      option3: "Venus",
+      option4: "Pluto",
+      ans: 1, // Correct answer is "Mercury"
+    },
+    {
+      id: 9,
+      question:
+        "What is the term for a rocky body that orbits the Sun but is smaller than a planet?",
+      option1: "Asteroid",
+      option2: "Comet",
+      option3: "Meteor",
+      option4: "Satellite",
+      ans: 1, // Correct answer is "Asteroid"
+    },
+    {
+      id: 10,
+      question: "What is the closest star to Earth?",
+      option1: "Sirius",
+      option2: "Proxima Centauri",
+      option3: "Alpha Centauri",
+      option4: "The Sun",
+      ans: 4, // Correct answer is "The Sun"
+    },
+  ],
 };
 
 export default Quest;

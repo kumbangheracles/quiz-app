@@ -47,26 +47,59 @@
   gap: 20px;
   margin-top: 70px;
 }
-
+/* .list-number {
+  padding: 1rem;
+  background-color: azure;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 40vh;
+  width: 180px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  align-items: center;
+  text-align: center;
+}
+.number-item {
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.number-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8%;
+  width: 100%;
+  background-color: black;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(121, 248, 248);
+  z-index: -10;
+  cursor: pointer;
+} */
 .footer {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-direction: column;
-  /* background-color: rgb(101, 101, 239);
-  padding: 1rem;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 8vh; */
-  position: fixed;
-  bottom: 50%;
+  bottom: 45%;
   left: 70px;
-  /* width: 100%; */
   align-items: center;
 }
-.footer button {
+.footer > button {
   /* padding: 10px; */
   width: 180px;
   height: 30px;
@@ -79,7 +112,7 @@
   z-index: 1;
   transition: 0.3s;
 }
-.footer button::after {
+.footer > button::after {
   content: "";
   background-color: rgb(121, 248, 248);
   position: absolute;
@@ -91,7 +124,7 @@
   z-index: -1;
   transition: 0.3s;
 }
-.footer button:hover::after {
+.footer > button:hover::after {
   width: 100%;
 }
 

@@ -26,6 +26,18 @@ const DataRoute = [
     name: "Programming",
     data: Quest.programming,
   },
+  {
+    id: 5,
+    path: "/QuetionTest/biology",
+    name: "Biology",
+    data: Quest.biology,
+  },
+  {
+    id: 6,
+    path: "/QuetionTest/astronomy",
+    name: "Astronomy",
+    data: Quest.astronomy,
+  },
   // {
   //   id: 4,
   //   path: "/Question",
