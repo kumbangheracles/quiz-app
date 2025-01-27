@@ -499,72 +499,72 @@ const Quest = {
       option4: "Sombrero Galaxy",
       ans: 2, // Correct answer is "Milky Way Galaxy"
     },
-    {
-      id: 4,
-      question:
-        "Which celestial event occurs when the Moon passes between the Earth and the Sun?",
-      option1: "Lunar Eclipse",
-      option2: "Solar Eclipse",
-      option3: "Equinox",
-      option4: "Solstice",
-      ans: 2, // Correct answer is "Solar Eclipse"
-    },
-    {
-      id: 5,
-      question: "What is the name of the first human to travel into space?",
-      option1: "Buzz Aldrin",
-      option2: "Neil Armstrong",
-      option3: "Yuri Gagarin",
-      option4: "Alan Shepard",
-      ans: 3, // Correct answer is "Yuri Gagarin"
-    },
-    {
-      id: 6,
-      question:
-        "What is the term for a star that suddenly increases greatly in brightness before fading?",
-      option1: "Supernova",
-      option2: "Black Hole",
-      option3: "Neutron Star",
-      option4: "Comet",
-      ans: 1, // Correct answer is "Supernova"
-    },
-    {
-      id: 7,
-      question: "Which planet has the most extensive ring system?",
-      option1: "Saturn",
-      option2: "Jupiter",
-      option3: "Uranus",
-      option4: "Neptune",
-      ans: 1, // Correct answer is "Saturn"
-    },
-    {
-      id: 8,
-      question: "What is the smallest planet in our solar system?",
-      option1: "Mercury",
-      option2: "Mars",
-      option3: "Venus",
-      option4: "Pluto",
-      ans: 1, // Correct answer is "Mercury"
-    },
-    {
-      id: 9,
-      question:
-        "What is the term for a rocky body that orbits the Sun but is smaller than a planet?",
-      option1: "Asteroid",
-      option2: "Comet",
-      option3: "Meteor",
-      option4: "Satellite",
-      ans: 1, // Correct answer is "Asteroid"
-    },
-    {
-      id: 10,
-      question: "What is the closest star to Earth?",
-      option1: "Sirius",
-      option2: "Proxima Centauri",
-      option3: "Alpha Centauri",
-      option4: "The Sun",
-      ans: 4, // Correct answer is "The Sun"
-    },
+    // {
+    //   id: 4,
+    //   question:
+    //     "Which celestial event occurs when the Moon passes between the Earth and the Sun?",
+    //   option1: "Lunar Eclipse",
+    //   option2: "Solar Eclipse",
+    //   option3: "Equinox",
+    //   option4: "Solstice",
+    //   ans: 2, // Correct answer is "Solar Eclipse"
+    // },
+    // {
+    //   id: 5,
+    //   question: "What is the name of the first human to travel into space?",
+    //   option1: "Buzz Aldrin",
+    //   option2: "Neil Armstrong",
+    //   option3: "Yuri Gagarin",
+    //   option4: "Alan Shepard",
+    //   ans: 3, // Correct answer is "Yuri Gagarin"
+    // },
+    // {
+    //   id: 6,
+    //   question:
+    //     "What is the term for a star that suddenly increases greatly in brightness before fading?",
+    //   option1: "Supernova",
+    //   option2: "Black Hole",
+    //   option3: "Neutron Star",
+    //   option4: "Comet",
+    //   ans: 1, // Correct answer is "Supernova"
+    // },
+    // {
+    //   id: 7,
+    //   question: "Which planet has the most extensive ring system?",
+    //   option1: "Saturn",
+    //   option2: "Jupiter",
+    //   option3: "Uranus",
+    //   option4: "Neptune",
+    //   ans: 1, // Correct answer is "Saturn"
+    // },
+    // {
+    //   id: 8,
+    //   question: "What is the smallest planet in our solar system?",
+    //   option1: "Mercury",
+    //   option2: "Mars",
+    //   option3: "Venus",
+    //   option4: "Pluto",
+    //   ans: 1, // Correct answer is "Mercury"
+    // },
+    // {
+    //   id: 9,
+    //   question:
+    //     "What is the term for a rocky body that orbits the Sun but is smaller than a planet?",
+    //   option1: "Asteroid",
+    //   option2: "Comet",
+    //   option3: "Meteor",
+    //   option4: "Satellite",
+    //   ans: 1, // Correct answer is "Asteroid"
+    // },
+    // {
+    //   id: 10,
+    //   question: "What is the closest star to Earth?",
+    //   option1: "Sirius",
+    //   option2: "Proxima Centauri",
+    //   option3: "Alpha Centauri",
+    //   option4: "The Sun",
+    //   ans: 4, // Correct answer is "The Sun"
+    // },
   ],
 };
 

@@ -15,7 +15,10 @@ export default function QuestionTest({
       isCorrect: null, // Status benar/salah
     }))
   );
-
+  const [modalState, setModalState] = useState({
+    isOpen: false,
+    message: "Loading . . .",
+  });
   const handleSelectAnswer = (questionId, option) => {
     setSoal((prevSoal) =>
       prevSoal.map((item) =>
@@ -23,10 +26,11 @@ export default function QuestionTest({
       )
     );
   };
-  const [modal, setModal] = useState(false);
-  function toggleModal() {
-    setModal((prev) => !prev);
+
+  function toggleModal(message = "Loading . . .") {
+    setModalState((prevState) => ({ isOpen: !prevState.isOpen, message }));
   }
+
   const submitHandler = () => {
     // Cek apakah ada soal yang belum dijawab
     const unansweredQuestions = soal.some(
@@ -34,7 +38,7 @@ export default function QuestionTest({
     );
 
     if (unansweredQuestions) {
-      setModal((prev) => !prev);
+      toggleModal("Make sure all questions are answered!");
       return;
     }
 
@@ -45,8 +49,7 @@ export default function QuestionTest({
         isCorrect: item.selectedAnswer === item[`option${item.ans}`],
       }))
     );
-
-    alert("Answer Submitted");
+    toggleModal("All questions answered!");
   };
 
   const resetSelection = () => {
@@ -61,9 +64,15 @@ export default function QuestionTest({
 
   return (
     <>
-      <div className={`overlay ${modal ? "overlay-active" : ""}`}> </div>
+      <div className={`overlay ${modalState.isOpen ? "overlay-active" : ""}`}>
+        {" "}
+      </div>
       <div className="question">
-        <Modal modal={modal} toggleModal={toggleModal} />
+        <Modal
+          modal={modalState.isOpen}
+          toggleModal={() => toggleModal()}
+          desc={modalState.message}
+        />
         {soal.map((item) => (
           <div className="question-number" key={item.id}>
             <h4>
