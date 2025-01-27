@@ -64,54 +64,66 @@ export default function QuestionTest({
 
   return (
     <>
-      <div className={`overlay ${modalState.isOpen ? "overlay-active" : ""}`}>
-        {" "}
-      </div>
-      <div className="question">
-        <Modal
-          modal={modalState.isOpen}
-          toggleModal={() => toggleModal()}
-          desc={modalState.message}
-        />
-        {soal.map((item) => (
-          <div className="question-number" key={item.id}>
-            <h4>
-              {item.id}. {item.question}
-            </h4>
-            <div className="answer-list">
-              <AnswerTest
-                item={item}
-                selectedAnswer={item.selectedAnswer}
-                handleSelectAnswer={(option) =>
-                  handleSelectAnswer(item.id, option)
-                }
-              />
-            </div>
-            {item.isCorrect !== null && (
-              <>
-                <p className="answered">
-                  {item.isCorrect ? "Correct! ✅" : "Incorrect! ❌"}
-                </p>
-                {!item.isCorrect ? (
-                  <p className="answered">
-                    Correct Answer: {item[`option${item.ans}`]}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </>
-            )}
+      {isLoading && (
+        <div className="loading-container">
+          <div className="loader">{/* <p>loading. . . </p> */}</div>
+        </div>
+      )}
+
+      {!isLoading && (
+        <>
+          <div
+            className={`overlay ${modalState.isOpen ? "overlay-active" : ""}`}
+          >
+            {" "}
           </div>
-        ))}
-        <Footer
-          resetSelection={resetSelection}
-          submitHandler={submitHandler}
-          selectedAnswer={soal.selectedAnswer}
-          handleNavigation={handleNavigation}
-          soal={soal}
-          isLoading={isLoading}
-        />
-      </div>
+          <div className="question">
+            <Modal
+              modal={modalState.isOpen}
+              toggleModal={() => toggleModal()}
+              desc={modalState.message}
+            />
+            {soal.map((item) => (
+              <div className="question-number" key={item.id}>
+                <h4>
+                  {item.id}. {item.question}
+                </h4>
+                <div className="answer-list">
+                  <AnswerTest
+                    item={item}
+                    selectedAnswer={item.selectedAnswer}
+                    handleSelectAnswer={(option) =>
+                      handleSelectAnswer(item.id, option)
+                    }
+                  />
+                </div>
+                {item.isCorrect !== null && (
+                  <>
+                    <p className="answered">
+                      {item.isCorrect ? "Correct! ✅" : "Incorrect! ❌"}
+                    </p>
+                    {!item.isCorrect ? (
+                      <p className="answered">
+                        Correct Answer: {item[`option${item.ans}`]}
+                      </p>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                )}
+              </div>
+            ))}
+            <Footer
+              resetSelection={resetSelection}
+              submitHandler={submitHandler}
+              selectedAnswer={soal.selectedAnswer}
+              handleNavigation={handleNavigation}
+              soal={soal}
+              isLoading={isLoading}
+            />
+          </div>
+        </>
+      )}
     </>
   );
 }
