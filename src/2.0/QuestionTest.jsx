@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AnswerTest from "./AnswerTest";
 import Footer from "../Components/Layout/Footer";
 import "./test.css";
-
+import Modal from "./Modal";
 export default function QuestionTest({
   questData,
   handleNavigation,
@@ -23,7 +23,10 @@ export default function QuestionTest({
       )
     );
   };
-
+  const [modal, setModal] = useState(false);
+  function toggleModal() {
+    setModal((prev) => !prev);
+  }
   const submitHandler = () => {
     // Cek apakah ada soal yang belum dijawab
     const unansweredQuestions = soal.some(
@@ -31,7 +34,7 @@ export default function QuestionTest({
     );
 
     if (unansweredQuestions) {
-      alert("Pastikan semua jawaban terisi sebelum submit!");
+      setModal((prev) => !prev);
       return;
     }
 
@@ -57,45 +60,49 @@ export default function QuestionTest({
   };
 
   return (
-    <div className="question">
-      {soal.map((item) => (
-        <div className="question-number" key={item.id}>
-          <h4>
-            {item.id}. {item.question}
-          </h4>
-          <div className="answer-list">
-            <AnswerTest
-              item={item}
-              selectedAnswer={item.selectedAnswer}
-              handleSelectAnswer={(option) =>
-                handleSelectAnswer(item.id, option)
-              }
-            />
-          </div>
-          {item.isCorrect !== null && (
-            <>
-              <p className="answered">
-                {item.isCorrect ? "Correct! ✅" : "Incorrect! ❌"}
-              </p>
-              {!item.isCorrect ? (
+    <>
+      <div className={`overlay ${modal ? "overlay-active" : ""}`}> </div>
+      <div className="question">
+        <Modal modal={modal} toggleModal={toggleModal} />
+        {soal.map((item) => (
+          <div className="question-number" key={item.id}>
+            <h4>
+              {item.id}. {item.question}
+            </h4>
+            <div className="answer-list">
+              <AnswerTest
+                item={item}
+                selectedAnswer={item.selectedAnswer}
+                handleSelectAnswer={(option) =>
+                  handleSelectAnswer(item.id, option)
+                }
+              />
+            </div>
+            {item.isCorrect !== null && (
+              <>
                 <p className="answered">
-                  Correct Answer: {item[`option${item.ans}`]}
+                  {item.isCorrect ? "Correct! ✅" : "Incorrect! ❌"}
                 </p>
-              ) : (
-                ""
-              )}
-            </>
-          )}
-        </div>
-      ))}
-      <Footer
-        resetSelection={resetSelection}
-        submitHandler={submitHandler}
-        selectedAnswer={soal.selectedAnswer}
-        handleNavigation={handleNavigation}
-        soal={soal}
-        isLoading={isLoading}
-      />
-    </div>
+                {!item.isCorrect ? (
+                  <p className="answered">
+                    Correct Answer: {item[`option${item.ans}`]}
+                  </p>
+                ) : (
+                  ""
+                )}
+              </>
+            )}
+          </div>
+        ))}
+        <Footer
+          resetSelection={resetSelection}
+          submitHandler={submitHandler}
+          selectedAnswer={soal.selectedAnswer}
+          handleNavigation={handleNavigation}
+          soal={soal}
+          isLoading={isLoading}
+        />
+      </div>
+    </>
   );
 }

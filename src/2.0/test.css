@@ -46,6 +46,9 @@
   flex-direction: column;
   gap: 20px;
   margin-top: 70px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 /* .list-number {
   padding: 1rem;

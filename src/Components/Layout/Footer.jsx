@@ -3,6 +3,7 @@ import ResetButton from "./ResetButton";
 import SubmitButton from "./SubmittButton";
 import BackButton from "../../assets/icon/backButton.svg";
 import ListNumber from "./ListNumber";
+
 export default function Footer({
   resetSelection,
   submitHandler,
@@ -40,7 +41,6 @@ export default function Footer({
   return (
     <div className="footer">
       {/* <ListNumber soal={soal} selectedAnswer={selectedAnswer} /> */}
-
       <button onClick={() => handleNavigation("/")} className="back-button">
         <img src={BackButton} alt="" /> Back
       </button>
