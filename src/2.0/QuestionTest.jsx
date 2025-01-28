@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import AnswerTest from "./AnswerTest";
 import Footer from "../Components/Layout/Footer";
 import "./test.css";
 import Modal from "./Modal";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function QuestionTest({
   questData,
   handleNavigation,
   isLoading,
+  modalState,
+  toggleModal,
 }) {
   const [soal, setSoal] = useState(
     questData.map((item) => ({
@@ -15,10 +20,7 @@ export default function QuestionTest({
       isCorrect: null, // Status benar/salah
     }))
   );
-  const [modalState, setModalState] = useState({
-    isOpen: false,
-    message: "Loading . . .",
-  });
+
   const handleSelectAnswer = (questionId, option) => {
     setSoal((prevSoal) =>
       prevSoal.map((item) =>
@@ -26,10 +28,6 @@ export default function QuestionTest({
       )
     );
   };
-
-  function toggleModal(message = "Loading . . .") {
-    setModalState((prevState) => ({ isOpen: !prevState.isOpen, message }));
-  }
 
   const submitHandler = () => {
     // Cek apakah ada soal yang belum dijawab
@@ -62,10 +60,19 @@ export default function QuestionTest({
     );
   };
 
+  useEffect(() => {
+    AOS.init({
+      durationa: 100,
+      easing: "ease-in-out",
+      once: false,
+      offset: 200,
+    });
+  }, []);
+
   return (
     <>
       {isLoading && (
-        <div className="loading-container">
+        <div className="loading-container" data-aos="fade-down">
           <div className="loader">{/* <p>loading. . . </p> */}</div>
         </div>
       )}
@@ -84,7 +91,7 @@ export default function QuestionTest({
               desc={modalState.message}
             />
             {soal.map((item) => (
-              <div className="question-number" key={item.id}>
+              <div className="question-number" key={item.id} data-aos="fade-up">
                 <h4>
                   {item.id}. {item.question}
                 </h4>

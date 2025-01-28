@@ -6,6 +6,9 @@
   font-family: "Caladea", serif;
 }
 
+body {
+  overflow-x: hidden;
+}
 .answer-list {
   list-style: none;
   display: flex;
@@ -20,7 +23,7 @@
   width: 60vh;
   min-height: 30vh;
   padding: 2rem;
-  margin: auto;
+  margin-inline: auto;
   border-radius: 20px;
   letter-spacing: 1px;
   border: 2px solid;
@@ -45,7 +48,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 70px;
+  margin-top: 150px;
   position: relative;
   width: 100%;
   height: 100%;
