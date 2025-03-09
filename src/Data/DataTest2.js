@@ -566,6 +566,11 @@ const Quest = {
       ans: 4, // Correct answer is "The Sun"
     },
   ],
+  kosong: [
+    {
+      test: "lorem",
+    },
+  ],
 };
 
 export default Quest;

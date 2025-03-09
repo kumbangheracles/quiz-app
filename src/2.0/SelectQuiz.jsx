@@ -12,7 +12,7 @@ import QuestionTest from "./QuestionTest";
 import { DataRoute } from "../Data/DataRoute";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Navbar from "../Components/Layout/Navbar";
 export default function SelectQuiz() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
@@ -46,6 +46,7 @@ export default function SelectQuiz() {
   }, []);
   return (
     <>
+      {/* <Navbar /> */}
       {isLoading && (
         <div className="loading-container" data-aos="fade-down">
           <div className="loader"></div>

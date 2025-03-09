@@ -11,32 +11,38 @@ const DataRoute = [
   {
     id: 2,
     path: "/QuestionTest/science",
-    name: "Sience",
+    name: "Science",
     data: Quest.science,
   },
   {
     id: 3,
-    path: "/QuetionTest/math",
+    path: "/QuestionTest/math",
     name: "Mathematics",
     data: Quest.math,
   },
   {
     id: 4,
-    path: "/QuetionTest/programming",
+    path: "/QuestionTest/programming",
     name: "Programming",
     data: Quest.programming,
   },
   {
     id: 5,
-    path: "/QuetionTest/biology",
+    path: "/QuestionTest/biology",
     name: "Biology",
     data: Quest.biology,
   },
   {
     id: 6,
-    path: "/QuetionTest/astronomy",
+    path: "/QuestionTest/astronomy",
     name: "Astronomy",
     data: Quest.astronomy,
+  },
+  {
+    id: 6,
+    path: "/QuestionTest/Kosong",
+    name: "Kosong",
+    data: Quest.kosong,
   },
   // {
   //   id: 4,

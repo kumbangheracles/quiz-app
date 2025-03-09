@@ -6,6 +6,7 @@
   position: fixed;
   left: 61vh;
   top: 0;
+  margin-inline: auto;
   transform: translateY(-100%);
   z-index: 1000;
   transition: 0.5s;
@@ -16,6 +17,36 @@
   gap: 10px;
   letter-spacing: 2px;
   width: 500px;
+}
+
+@media (max-width: 780px) {
+  .modal-container {
+    left: 10vh;
+    width: 480px;
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .modal-container {
+    left: 3vh;
+    width: 380px;
+    text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .modal-container {
+    left: 5.5vh;
+    width: 300px;
+    text-align: center;
+  }
+}
+@media (max-width: 330px) {
+  .modal-container {
+    left: 2.5vh;
+    width: 290px;
+    text-align: center;
+    padding: 1rem;
+  }
 }
 
 .overlay {

@@ -6,6 +6,7 @@ import "./test.css";
 import Modal from "./Modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Navbar from "../Components/Layout/Navbar";
 export default function QuestionTest({
   questData,
   handleNavigation,
@@ -79,12 +80,13 @@ export default function QuestionTest({
     }
   }, []);
 
-  function handleSaveData() {
-    const data = soal.map((i) => localStorage.setItem(i.selectedAnswer));
-  }
-
   return (
     <>
+      <Navbar
+        isLoading={isLoading}
+        toggleModal={toggleModal}
+        modalState={modalState}
+      />
       {isLoading && (
         <div className="loading-container" data-aos="fade-down">
           <div className="loader">{/* <p>loading. . . </p> */}</div>
@@ -98,6 +100,7 @@ export default function QuestionTest({
           >
             {" "}
           </div>
+
           <div className="question">
             <Modal
               modal={modalState.isOpen}
