@@ -22,11 +22,14 @@ export default function QuestionTest({
   );
 
   const handleSelectAnswer = (questionId, option) => {
-    setSoal((prevSoal) =>
-      prevSoal.map((item) =>
+    setSoal((prevSoal) => {
+      const updatedSoal = prevSoal.map((item) =>
         item.id === questionId ? { ...item, selectedAnswer: option } : item
-      )
-    );
+      );
+      localStorage.setItem("soal", JSON.stringify(updatedSoal));
+
+      return updatedSoal;
+    });
   };
 
   const submitHandler = () => {
@@ -51,13 +54,15 @@ export default function QuestionTest({
   };
 
   const resetSelection = () => {
-    setSoal((prevSoal) =>
-      prevSoal.map((item) => ({
+    setSoal((prevSoal) => {
+      const resetSoal = prevSoal.map((item) => ({
         ...item,
         selectedAnswer: null,
         isCorrect: null,
-      }))
-    );
+      }));
+      localStorage.removeItem("soal", JSON.stringify(resetSoal));
+      return resetSoal;
+    });
   };
 
   useEffect(() => {
@@ -67,7 +72,16 @@ export default function QuestionTest({
       once: false,
       offset: 200,
     });
+
+    const storedSoal = JSON.parse(localStorage.getItem("soal"));
+    if (storedSoal) {
+      setSoal(storedSoal);
+    }
   }, []);
+
+  function handleSaveData() {
+    const data = soal.map((i) => localStorage.setItem(i.selectedAnswer));
+  }
 
   return (
     <>
