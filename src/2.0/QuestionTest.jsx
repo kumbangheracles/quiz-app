@@ -82,11 +82,11 @@ export default function QuestionTest({
 
   return (
     <>
-      <Navbar
+      {/* <Navbar
         isLoading={isLoading}
         toggleModal={toggleModal}
         modalState={modalState}
-      />
+      /> */}
       {isLoading && (
         <div className="loading-container" data-aos="fade-down">
           <div className="loader">{/* <p>loading. . . </p> */}</div>

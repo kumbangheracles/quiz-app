@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import Modal from "../../2.0/Modal";
+import { useNavigation } from "react-router";
 export default function Navbar({ isLoading, toggleModal, modalState }) {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -13,6 +14,8 @@ export default function Navbar({ isLoading, toggleModal, modalState }) {
       window.removeEventListener("beforeunload", handleBeforeLoad);
     };
   }, []);
+  //   const navigation = useNavigation();
+  //   const loading = navigation.state === "loading";
   return (
     <>
       <nav
